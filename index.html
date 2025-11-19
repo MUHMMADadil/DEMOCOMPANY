@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Company Name • Portfolio</title>
+  <meta name="description" content="Portfolio: apps, websites, and secure solutions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="Company Name home">
+        <span class="brand-name">Company Name</span>
+      </a>
+
+      <nav id="site-nav" class="nav" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#stats">Stats</a>
+        <a href="#contact" class="pill small">Let’s talk</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme" aria-pressed="false" title="Toggle light/dark">
+          <!-- Sun -->
+          <svg class="sun" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+            <path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.8 1.42-1.42zm10.45 14.32l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM12 4V1h-0v3h0zm0 19v-3h0v3h0zM4 12H1v0h3v0zm19 0h-3v0h3v0zM6.76 19.16l-1.8 1.79 1.41 1.41 1.79-1.8-1.4-1.4zM19.16 6.76l1.79-1.8-1.41-1.41-1.8 1.79 1.42 1.42zM12 7a5 5 0 100 10 5 5 0 000-10z"/>
+          </svg>
+          <!-- Moon -->
+          <svg class="moon" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+          </svg>
+        </button>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-controls="site-nav" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Slider -->
+    <section class="hero" id="home">
+      <div class="slider" id="slider">
+        <article class="slide is-active" style="--bg:url('assets/hero-1.jpg')">
+          <div class="container slide-content">
+            <div class="eyebrow">No magic. Just logic.</div>
+            <h1>Products, websites, and apps — start to finish.</h1>
+            <p>Design‑to‑code builds with a security‑first mindset. I ship fast, keep pixels aligned, and care about outcomes.</p>
+            <div class="actions">
+              <a class="pill" href="#work">See my work</a>
+              <a class="pill ghost" href="#contact">Book a call</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide" style="--bg:url('assets/hero-2.jpg')">
+          <div class="container slide-content">
+            <div class="eyebrow">360° cybersecurity feel</div>
+            <h1>Secure, scalable, and blazing fast.</h1>
+            <p>Audits, hardening, and dev for startups and SMBs. Performance + protection baked in.</p>
+            <div class="actions">
+              <a class="pill" href="#services">Services</a>
+              <a class="pill ghost" href="#contact">Free consult</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <button class="slider-nav prev" id="prev" aria-label="Previous slide">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+      </button>
+      <button class="slider-nav next" id="next" aria-label="Next slide">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/></svg>
+      </button>
+      <div class="dots" id="slider-dots" aria-label="Slide indicators"></div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="section-title">What I offer</h2>
+        <p class="section-lead">From discovery to deployment — practical craftsmanship with a product mindset.</p>
+
+        <div class="grid services">
+          <article class="card service" data-reveal>
+            <div class="icon">
+              <img src="assets/971.jpg" alt="" />
+            </div>
+            <h3>Product Design</h3>
+            <p>Wireframes, design systems, and delightful UI with accessibility and responsiveness built in.</p>
+            <a href="#work" class="link">Explore work →</a>
+          </article>
+
+          <article class="card service" data-reveal>
+            <div class="icon">
+              <img src="assets/1720.jpg" alt="" />
+            </div>
+            <h3>Full‑stack Dev</h3>
+            <p>React / Vue, Node, REST/GraphQL, and clean CI/CD. I aim for maintainable, testable code.</p>
+            <a href="#work" class="link">Explore work →</a>
+          </article>
+
+          <article class="card service" data-reveal>
+            <div class="icon">
+              <img src="assets/5726840.jpg" alt="" />
+            </div>
+            <h3>App Security</h3>
+            <p>Threat modeling, auth, OWASP hardening, and automated checks without blocking delivery.</p>
+            <a href="#work" class="link">Explore work →</a>
+          </article>
+
+          <article class="card service" data-reveal>
+            <div class="icon">
+              <img src="assets/ai.jpg" alt="" />
+            </div>
+            <h3>Cloud & Ops</h3>
+            <p>Docker, serverless, and infra as code. Observability, alerts, and performance budgets.</p>
+            <a href="#work" class="link">Explore work →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work / Case Studies -->
+    <section id="work" class="section">
+      <div class="container">
+        <h2 class="section-title">Featured case studies</h2>
+        <p class="section-lead">A mix of product polish and security rigor — inspired by both references.</p>
+
+        <div class="grid work">
+          <article class="case card" data-reveal>
+            <figure class="thumb">
+              <img src="assets/healthCare.jpg" alt="Healthcare Portal Redesign" />
+            </figure>
+            <div class="case-body">
+              <h3>Healthcare Portal Redesign</h3>
+              <p>Restructured IA, accessibility-first UI, and faster paths for appointment tasks.</p>
+              <a href="#" class="pill small read-case" data-case="healthcare">Read case</a>
+            </div>
+          </article>
+
+          <article class="case card" data-reveal>
+            <figure class="thumb">
+              <img src="assets/security.jpg" alt="Realtime Security Dashboard" />
+            </figure>
+            <div class="case-body">
+              <h3>Realtime Security Dashboard</h3>
+              <p>Streaming events, triage queues, and actionable insights for SOC teams.</p>
+              <a href="#" class="pill small read-case" data-case="security">Read case</a>
+            </div>
+          </article>
+
+          <article class="case card" data-reveal>
+            <figure class="thumb">
+              <img src="assets/commeres.jpg" alt="E‑commerce Revamp" />
+            </figure>
+            <div class="case-body">
+              <h3>E‑commerce Revamp</h3>
+              <p>Checkout conversion +24%, Core Web Vitals in the green, and a sleek, modern, trustworthy, cohesive brand feel.</p>
+              <a href="#" class="pill small read-case" data-case="commerce">Read case</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results / Stats -->
+    <section id="stats" class="section band">
+  <div class="container stats">
+    <div class="stat" data-reveal>
+      <span class="num" data-target="120" data-suffix="+">0</span>
+      <span class="label">Projects delivered</span>
+    </div>
+    <div class="stat" data-reveal>
+      <span class="num" data-target="2">0</span>
+      <span class="label">Weeks to first release (avg)</span>
+    </div>
+    <div class="stat" data-reveal>
+      <span class="num" data-target="95" data-suffix="%">0</span>
+      <span class="label">Sessions in Core Web Vitals green</span>
+    </div>
+    <div class="stat" data-reveal>
+      <span class="num" data-target="4.9" data-decimals="1" data-suffix="/5">0</span>
+      <span class="label">Client satisfaction</span>
+    </div>
+  </div>
+</section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <div class="contact-card" data-reveal>
+          <!-- Left: intro + quick ways to reach out -->
+          <div class="contact-info">
+            <span class="badge">Get in touch</span>
+            <h2>Let’s build something great</h2>
+            <p>Send a note and I’ll reply within 24 hours. Prefer email or a quick call? Use the shortcuts below.</p>
+
+            <div class="contact-ways">
+              <a class="contact-chip" href="mailto:hello@company.com">
+                <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                hello@company.com
+              </a>
+              <a class="contact-chip alt" href="#work">
+                <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M7 2v2H5a2 2 0 00-2 2v2h2V6h2v2h2V6h2v2h2V6h2v2h2V6a2 2 0 00-2-2h-2V2h-2v2h-2V2H9v2H7V2H7zM3 10v8a2 2 0 002 2h14a2 2 0 002-2v-8H3zm5 3h2v2H8v-2zm4 0h2v2h-2v-2z"/></svg>
+                Book a 20‑min call
+              </a>
+            </div>
+
+            <ul class="contact-points">
+              <li>Transparent pricing and timelines</li>
+              <li>NDA‑friendly and security‑minded</li>
+              <li>Response within one business day</li>
+            </ul>
+          </div>
+
+          <!-- Right: form -->
+          <form class="contact-form modern" action="#" method="post" novalidate>
+            <div class="row">
+              <label class="field">
+                <span>Name</span>
+                <input type="text" name="name" placeholder="Jane Doe" required>
+              </label>
+              <label class="field">
+                <span>Email</span>
+                <input type="email" name="email" placeholder="you@company.com" required>
+              </label>
+            </div>
+            <div class="row">
+              <label class="field">
+                <span>Project type</span>
+                <input type="text" name="type" placeholder="Website, App, Security Audit…">
+              </label>
+              <label class="field">
+                <span>Budget</span>
+                <select name="budget">
+                  <option value="">Select</option>
+                  <option>$3k–$8k</option>
+                  <option>$8k–$20k</option>
+                  <option>$20k+</option>
+                </select>
+              </label>
+            </div>
+            <label class="field">
+              <span>Message</span>
+              <textarea name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
+            </label>
+
+            <div class="form-actions">
+              <button class="pill cta-primary" type="submit">Send message</button>
+              <small class="privacy">By sending, you agree to the privacy policy.</small>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Company Name. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Case Study Modal -->
+  <div class="modal" id="case-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Case details">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-dialog" role="document">
+      <button class="modal-close" aria-label="Close" data-close>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.3 5.71L12 12l6.3 6.29-1.41 1.41L10.59 13.41 4.29 19.71 2.88 18.3 9.17 12 2.88 5.71 4.29 4.29l6.3 6.3 6.29-6.3z"/></svg>
+      </button>
+      <article class="case-detail" id="case-content"></article>
+    </div>
+  </div>
+
+  <!-- Case Templates (hidden) -->
+  <template id="tpl-case-healthcare">
+    <header class="detail-hero">
+      <img src="assets/healthCare.jpg" alt="Healthcare portal interface" />
+      <div class="chips">
+        <span>Healthcare</span><span>Accessibility</span><span>Next.js</span><span>HIPAA-aware</span>
+      </div>
+      <h2 class="case-title">Healthcare Portal Redesign</h2>
+      <p class="lede">We rebuilt a multi‑clinic patient portal for speed, accessibility, and trust — from IA to deployment — while keeping PHI safe and compliance in mind.</p>
+    </header>
+
+    <section class="detail-grid">
+      <div>
+        <h3>Context & challenges</h3>
+        <ul>
+          <li>Outdated UI with poor accessibility (AA targets missed).</li>
+          <li>Slow pages and complex appointment flows increased support tickets.</li>
+          <li>Security concerns around authentication and sensitive data handling.</li>
+        </ul>
+
+        <h3>Approach</h3>
+        <ul>
+          <li>Discovery and IA overhaul; new design system with tokens and components.</li>
+          <li>Migrated to Next.js with SSR and edge caching for fast, predictable loads.</li>
+          <li>Modern auth (OAuth2 + optional 2FA), session hardening, secure forms.</li>
+          <li>Storybook + a11y tests; Playwright/Cypress for critical paths.</li>
+        </ul>
+      </div>
+      <aside>
+        <h4>Highlights</h4>
+        <ul class="kpis">
+          <li><strong>+32%</strong> self‑service task completion</li>
+          <li><strong>‑47%</strong> median page load</li>
+          <li><strong>98%</strong> sessions in Core Web Vitals green</li>
+          <li><strong>4.8/5</strong> patient satisfaction (post‑launch)</li>
+        </ul>
+        <h4>Stack</h4>
+        <p>Next.js, Node/Nest, GraphQL, Postgres, Redis, Auth0, Storybook, Playwright</p>
+        <h4>Infra</h4>
+        <p>AWS (CloudFront, Lambda, RDS), Terraform, CI/CD with checks</p>
+        <h4>Timeline</h4>
+        <p>12 weeks, 1 PM · 1 Designer · 2 Engineers</p>
+      </aside>
+    </section>
+
+    <section>
+      <h3>Outcome</h3>
+      <p>Patients complete more tasks without calling support, the interface meets WCAG 2.1 AA, and the organization has a maintainable design system with automated quality gates.</p>
+    </section>
+  </template>
+
+  <template id="tpl-case-security">
+    <header class="detail-hero">
+      <img src="assets/security.jpg" alt="Realtime security dashboard" />
+      <div class="chips">
+        <span>Cybersecurity</span><span>Streaming</span><span>WebSockets</span><span>RBAC</span>
+      </div>
+      <h2 class="case-title">Realtime Security Dashboard</h2>
+      <p class="lede">A single pane of glass for SOC teams — live events, triage queues, and automated insights that cut noise and response time.</p>
+    </header>
+
+    <section class="detail-grid">
+      <div>
+        <h3>Problem</h3>
+        <ul>
+          <li>Disparate tools and delayed visibility increased mean time to detect.</li>
+          <li>Analysts drowned in alerts without clear prioritization.</li>
+        </ul>
+
+        <h3>Solution</h3>
+        <ul>
+          <li>Event pipeline with Kafka; aggregation in ClickHouse/Elasticsearch.</li>
+          <li>Realtime UI with WebSockets and reactive graphs (D3/Visx).</li>
+          <li>MITRE ATT&CK mapping, playbooks, and noise reduction rules.</li>
+          <li>Strict RBAC, audit trail, SSO (SAML/OIDC), and encrypted transport.</li>
+        </ul>
+      </div>
+      <aside>
+        <h4>Impact</h4>
+        <ul class="kpis">
+          <li><strong>‑63%</strong> MTTD</li>
+          <li><strong>‑45%</strong> triage time</li>
+          <li><strong>410k+/min</strong> sustained events</li>
+          <li><strong>99.95%</strong> uptime</li>
+        </ul>
+        <h4>Stack</h4>
+        <p>React + D3/Visx, Node/GraphQL, Kafka, ClickHouse/Elastic, Timeseries DB</p>
+        <h4>Ops</h4>
+        <p>Kubernetes, Prometheus, Grafana, Loki; IaC with Terraform</p>
+        <h4>Timeline</h4>
+        <p>10 weeks, 1 Lead + 2 Engineers</p>
+      </aside>
+    </section>
+
+    <section>
+      <h3>Outcome</h3>
+      <p>The dashboard gives SOC teams realtime situational awareness with actionable signals. Integrations and role‑based views reduced noise and accelerated remediation.</p>
+    </section>
+  </template>
+
+  <template id="tpl-case-commerce">
+    <header class="detail-hero">
+      <img src="assets/Commeres.jpg" alt="E‑commerce storefront and checkout" />
+      <div class="chips">
+        <span>E‑commerce</span><span>Performance</span><span>A/B testing</span><span>SEO</span>
+      </div>
+      <h2 class="case-title">E‑commerce Revamp</h2>
+      <p class="lede">We modernized a high‑volume storefront and checkout, focusing on performance, UX, and conversion — especially on mobile.</p>
+    </header>
+
+    <section class="detail-grid">
+      <div>
+        <h3>What we changed</h3>
+        <ul>
+          <li>Headless front‑end with Next.js; edge caching and image optimization.</li>
+          <li>Streamlined PDP/PLP, clearer CTAs, and simplified multi‑step checkout.</li>
+          <li>Search + recommendations (Algolia), and structured SEO metadata.</li>
+          <li>A/B testing and analytics for data‑driven iterations.</li>
+        </ul>
+
+        <h3>Payments & trust</h3>
+        <ul>
+          <li>Stripe + Apple/Google Pay; address validation and fraud checks.</li>
+          <li>Transparent shipping/returns and accessible forms.</li>
+        </ul>
+      </div>
+      <aside>
+        <h4>Results</h4>
+        <ul class="kpis">
+          <li><strong>+24%</strong> checkout conversion</li>
+          <li><strong>+18%</strong> average order value</li>
+          <li><strong>‑25%</strong> bounce (mobile)</li>
+          <li><strong>1.8s</strong> LCP; CWV solidly green</li>
+        </ul>
+        <h4>Stack</h4>
+        <p>Next.js, Vercel, Shopify/Commerce API, Stripe, Algolia, Segment</p>
+        <h4>Timeline</h4>
+        <p>8 weeks, 1 Designer · 2 Engineers</p>
+      </aside>
+    </section>
+
+    <section>
+      <h3>Outcome</h3>
+      <p>The store loads fast, communicates trust, and removes friction at checkout. Continuous testing keeps compounding gains over time.</p>
+    </section>
+  </template>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
