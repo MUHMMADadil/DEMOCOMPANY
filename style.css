@@ -336,3 +336,10 @@ html[data-theme="light"] .modal-backdrop { background: rgba(0,0,0,.38); }
 /* Disable constellation in HEADER only */
 .site-header .header-net { display: none !important; }
 .site-header { overflow: visible !important; }
+
+
+.contact-form.modern .contact-offers {
+  margin: 6px 0 12px 18px;
+  color: var(--muted);
+}
+.contact-form.modern h4 { margin: 6px 0; }

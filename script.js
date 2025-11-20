@@ -156,7 +156,6 @@
 var y = document.getElementById('year');
 if (y) y.textContent = new Date().getFullYear();
 
-
 // Case Study Modal (open template content by key)
 (function caseModal() {
   var modal = document.getElementById('case-modal');
@@ -498,4 +497,40 @@ if (y) y.textContent = new Date().getFullYear();
     requestAnimationFrame(tick);
   }
   requestAnimationFrame(tick);
+})();
+
+// Contact form -> send to Flask + SQLite (single handler, guarded)
+(function contactFormSubmit() {
+  var form = document.querySelector('.contact-form.modern');
+  if (!form) return;
+
+  // Prevent double-binding if the script is included twice
+  if (window.__contactSubmitBound) return;
+  window.__contactSubmitBound = true;
+
+  // Local dev backend
+  var BACKEND = 'http://127.0.0.1:5000';
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    var btn = form.querySelector('button[type="submit"]');
+    var prev = btn ? btn.textContent : '';
+    if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+
+    try {
+      var data = new FormData(form);
+      var res = await fetch(BACKEND + '/api/contact', { method: 'POST', body: data });
+      var json = {};
+      try { json = await res.json(); } catch (_) {}
+
+      if (!res.ok || !json.ok) throw new Error((json && json.error) || 'Request failed');
+      if (btn) btn.textContent = 'Sent!';
+      form.reset();
+      setTimeout(function(){ if (btn){ btn.disabled=false; btn.textContent=prev; } }, 1200);
+    } catch (err) {
+      console.error('Submit error:', err);
+      alert('Network error: ' + err.message);
+      if (btn) { btn.disabled = false; btn.textContent = prev; }
+    }
+  });
 })();

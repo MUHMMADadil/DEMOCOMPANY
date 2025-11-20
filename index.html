@@ -85,7 +85,7 @@
     <!-- Services -->
     <section id="services" class="section">
       <div class="container">
-        <h2 class="section-title">What I offer</h2>
+        <h2 class="section-title">What we offer</h2>
         <p class="section-lead">From discovery to deployment — practical craftsmanship with a product mindset.</p>
 
         <div class="grid services">
@@ -93,8 +93,8 @@
             <div class="icon">
               <img src="assets/971.jpg" alt="" />
             </div>
-            <h3>Product Design</h3>
-            <p>Wireframes, design systems, and delightful UI with accessibility and responsiveness built in.</p>
+            <h3>SOAR playbooks and security automation</h3>
+            <p>Automated workflows within a SOAR platform that execute predefined sequences of actions to handle security incidents.</p>
             <a href="#work" class="link">Explore work →</a>
           </article>
 
@@ -102,7 +102,16 @@
             <div class="icon">
               <img src="assets/1720.jpg" alt="" />
             </div>
-            <h3>Full‑stack Dev</h3>
+            <h3>API integrations</h3>
+            <p>Process of connecting two or more software applications using their Application Programming Interfaces.</p>
+            <a href="#work" class="link">Explore work →</a>
+          </article>
+
+          <article class="card service" data-reveal>
+            <div class="icon">
+              <img src="assets/1720.jpg" alt="" />
+            </div>
+            <h3>Data integration pipelines</h3>
             <p>React / Vue, Node, REST/GraphQL, and clean CI/CD. I aim for maintainable, testable code.</p>
             <a href="#work" class="link">Explore work →</a>
           </article>
@@ -111,7 +120,7 @@
             <div class="icon">
               <img src="assets/5726840.jpg" alt="" />
             </div>
-            <h3>App Security</h3>
+            <h3>Automated & manual testing</h3>
             <p>Threat modeling, auth, OWASP hardening, and automated checks without blocking delivery.</p>
             <a href="#work" class="link">Explore work →</a>
           </article>
@@ -120,10 +129,20 @@
             <div class="icon">
               <img src="assets/ai.jpg" alt="" />
             </div>
-            <h3>Cloud & Ops</h3>
+            <h3>Security testing (SAST & DAST)</h3>
             <p>Docker, serverless, and infra as code. Observability, alerts, and performance budgets.</p>
             <a href="#work" class="link">Explore work →</a>
           </article>
+
+          <article class="card service" data-reveal>
+            <div class="icon">
+              <img src="assets/ai.jpg" alt="" />
+            </div>
+            <h3>Android app reversing</h3>
+            <p>Docker, serverless, and infra as code. Observability, alerts, and performance budgets.</p>
+            <a href="#work" class="link">Explore work →</a>
+          </article>
+
         </div>
       </div>
     </section>
@@ -159,7 +178,7 @@
 
           <article class="case card" data-reveal>
             <figure class="thumb">
-              <img src="assets/Commeres.jpg" alt="E‑commerce Revamp" />
+              <img src="assets/commeres.jpg" alt="E‑commerce Revamp" />
             </figure>
             <div class="case-body">
               <h3>E‑commerce Revamp</h3>
@@ -201,7 +220,7 @@
           <div class="contact-info">
             <span class="badge">Get in touch</span>
             <h2>Let’s build something great</h2>
-            <p>Send a note and I’ll reply within 24 hours. Prefer email or a quick call? Use the shortcuts below.</p>
+            <p>Send a note and we will reply within 24 hours. Prefer email or a quick call?.</p>
 
             <div class="contact-ways">
               <a class="contact-chip" href="mailto:hello@company.com">
@@ -226,28 +245,95 @@
             <div class="row">
               <label class="field">
                 <span>Name</span>
-                <input type="text" name="name" placeholder="Jane Doe" required>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                  autocomplete="name"
+                  pattern="^[A-Za-z ]+$"
+                  title="Only letters and spaces are allowed"
+                  oninput="this.value=this.value.replace(/[0-9]/g,'');"
+                >
               </label>
               <label class="field">
                 <span>Email</span>
-                <input type="email" name="email" placeholder="you@company.com" required>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="you@company.com"
+                  required
+                  autocomplete="email"
+                  pattern="^[A-Za-z0-9.]+@[A-Za-z0-9.]+\.[A-Za-z]{2,}$"
+                  title='Use only letters, numbers, and dots (allowed symbols: "@" and ".")'
+                  oninput="this.value=this.value.replace(/[^A-Za-z0-9@.]/g,'');"
+                >
               </label>
             </div>
+
+            <!-- New: company details -->
             <div class="row">
               <label class="field">
-                <span>Project type</span>
-                <input type="text" name="type" placeholder="Website, App, Security Audit…">
+                <span>Company name</span>
+                <input type="text" name="company" placeholder="leave blank if individual" autocomplete="organization">
               </label>
               <label class="field">
-                <span>Budget</span>
-                <select name="budget">
-                  <option value="">Select</option>
-                  <option>$3k–$8k</option>
-                  <option>$8k–$20k</option>
-                  <option>$20k+</option>
+                <span>Company size</span>
+                <select name="company_size">
+                  <option value="" disabled selected>Select size</option>
+                  <option value="1">Just me (Individual)</option>
+                  <option value="2-10">2–10</option>
+                  <option value="11-50">11–50</option>
+                  <option value="51-200">51–200</option>
+                  <option value="200+">200+</option>
                 </select>
               </label>
             </div>
+
+            <!-- New: contact + designation -->
+            <div class="row">
+              <label class="field">
+                <span>Contact</span>
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder=" xxx xxx xxxx"
+                  autocomplete="tel"
+                  inputmode="numeric"
+                  pattern="^\d{10,15}$"
+                  title="Digits only (10–15 numbers)"
+                  oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                >
+              </label>
+              <label class="field">
+                <span>Designation</span>
+                <select name="designation" required>
+                  <option value="" disabled selected>Select designation</option>
+                  <option value="individual">Individual</option>
+                  <option value="founder">Founder / Owner</option>
+                  <option value="cto">CTO / Engineering Lead</option>
+                  <option value="pm">Product Manager</option>
+                  <option value="security-lead">Security Lead</option>
+                  <option value="ops">Operations</option>
+                  <option value="other">Other</option>
+                </select>
+              </label>
+            </div>
+
+            <!-- Replaces old Project/Budget row: dropdown of projects you offer -->
+            <label class="field">
+              <span>Projects we offer</span>
+              <select name="project" required>
+                <option value="" disabled selected>Select a project…</option>
+                <option value="soar">SOAR playbooks and security automation</option>
+                <option value="api-integrations">API integrations</option>
+                <option value="data-pipelines">Data integration pipelines</option>
+                <option value="testing">Automated &amp; manual testing</option>
+                <option value="security-testing">Security testing (SAST &amp; DAST)</option>
+                <option value="android-reversing">Android app reversing</option>
+              </select>
+            </label>
+
             <label class="field">
               <span>Message</span>
               <textarea name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
@@ -255,9 +341,9 @@
 
             <div class="form-actions">
               <button class="pill cta-primary" type="submit">Send message</button>
-              <small class="privacy">By sending, you agree to the privacy policy.</small>
             </div>
           </form>
+
         </div>
       </div>
     </section>
