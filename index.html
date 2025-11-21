@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en" data-theme="light">
 <head>
@@ -178,7 +179,7 @@
 
           <article class="case card" data-reveal>
             <figure class="thumb">
-              <img src="assets/Commeres.jpg" alt="E‑commerce Revamp" />
+              <img src="assets/commeres.jpg" alt="E‑commerce Revamp" />
             </figure>
             <div class="case-body">
               <h3>E‑commerce Revamp</h3>
@@ -251,9 +252,13 @@
                   placeholder="Your Name"
                   required
                   autocomplete="name"
-                  pattern="^[A-Za-z ]+$"
-                  title="Only letters and spaces are allowed"
-                  oninput="this.value=this.value.replace(/[0-9]/g,'');"
+                  maxlength="60"
+                  pattern="^[A-Za-z]+(?: [A-Za-z]+)*$"
+                  title="Letters only (A–Z). No numbers or special characters."
+                  oninput="this.value=this.value
+                    .replace(/[^A-Za-z\s]/g,'')
+                    .replace(/\s{2,}/g,' ')
+                    .replace(/^\s+|\s+$/g,'');"
                 >
               </label>
               <label class="field">
